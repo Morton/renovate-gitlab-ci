@@ -1,0 +1,14 @@
+{
+  "name": "renovate-gitlab-ci",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "renovate --platform=gitlab --endpoint=$CI_API_V4_URL $CI_PROJECT_PATH"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "renovate": "^19.181.0"
+  }
+}
