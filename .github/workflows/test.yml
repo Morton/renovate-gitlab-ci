@@ -5,7 +5,7 @@ jobs:
   docker-build:
     runs-on: ubuntu-latest
     steps:
-      - name: GitHub Action for Build
-        uses: buildtool/build-action@v1
-        with:
-          dockerfile: Dockerfile
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Build Docker image
+        run: docker build .
