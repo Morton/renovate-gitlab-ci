@@ -1,6 +1,6 @@
 {
   "name": "renovate-gitlab-ci",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,5 +11,12 @@
   "dependencies": {
     "re2": "^1.10.5",
     "renovate": "^19.181.0"
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github"
+    ]
   }
 }
