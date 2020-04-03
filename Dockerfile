@@ -7,6 +7,6 @@ ENV PATH="/renovate:${PATH}"
 COPY package.json .
 COPY package-lock.json .
 
-RUN npm install
+RUN npm install --production
 
 ENTRYPOINT bash

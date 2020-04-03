@@ -18,5 +18,8 @@
       "@semantic-release/release-notes-generator",
       "@semantic-release/github"
     ]
+  },
+  "devDependencies": {
+    "@commitlint/config-angular": "^8.3.4"
   }
 }
