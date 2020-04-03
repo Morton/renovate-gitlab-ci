@@ -1,0 +1,4 @@
+#! /bin/sh
+
+export MR_ID=$(curl --insecure "$CI_API_V4_URL/projects/$CI_PROJECT_ID/merge_requests?state=opened&labels=renovate&wip=no" -H "Private-Token: $RENOVATE_TOKEN" | jq .[0].iid)
+curl -H "Private-Token: $RENOVATE_TOKEN" -X PUT --insecure "$CI_API_V4_URL/projects/$CI_PROJECT_ID/merge_requests/$MR_ID/rebase"
