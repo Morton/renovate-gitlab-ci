@@ -1,9 +1,5 @@
 name: 'release'
-on: 
-  push:
-    branches:
-      - 'master'
-      - 'morton/semantic-release-action'
+on: push
 
 jobs:
   release:
