@@ -47,6 +47,37 @@ Once your `gitlab-ci.yml` is pushed you can create a scheduled pipeline (Gitlab-
 
 Hit save. This will run renovate hourly.
 
+### Rebase before running renovate
+Usually renovate would automatically rebase branches but with periodically running rebase this doesn't work correctly. Instead you can add the `do-rebase` command to you gitlab-ci script:
+
+```yml
+  script:
+    - do-rebase
+    - do-renovate
+```
+
+Small limitation: This will only rebase the first branch with the label `renovate`.
+
+### Skipping https-validation
+On self-hosted gitlab instances you may run into issues with https. Yo may skip https-validation in those cases. Following gitlab-ci.yml will do so:
+
+```yml
+renovate:
+  image:
+    name: mortimmer/renovate-gitlab-ci
+  variables:
+    NODE_TLS_REJECT_UNAUTHORIZED: 0
+  script:
+    - git config --global http.sslVerify false
+    - do-rebase
+    - do-renovate
+  only:
+    refs:
+      - schedules
+    variables:
+      - $WHICH_SCHEDULE == "renovate"
+```
+
 ## Disadvantages to running renovate the usual way
 Renovate is not meant to run periodically but rather triggered via hooks on repository changes. This means things like automatic rebasing won't work properly with this approach.
 
