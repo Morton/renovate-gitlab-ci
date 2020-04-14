@@ -2,7 +2,7 @@
 Run [renovate](https://github.com/renovatebot/renovate) as a [gitlab-ci](https://docs.gitlab.com/ee/ci/) job.
 
 ## Why
-So far renovate can be consumed in two variants: as a service for publicly available Gitlab instances or self-hosted on any machine having access to your Gitlab instance. While the later is working quite fine, setting and maintaining it for just one or two projects may be overpowered.
+So far renovate can be consumed in two variants: as a service for publicly available Gitlab instances or self-hosted on any machine having access to your Gitlab instance. While the latter is working quite fine, setting and maintaining it for just one or two projects may be overpowered.
 
 For these cases this image can be used to run renovate periodically in gitlab-ci.
 
