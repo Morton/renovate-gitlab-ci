@@ -1,4 +1,4 @@
-FROM node:13.12.0-stretch
+FROM node:13.13.0-stretch
 
 WORKDIR "/renovate"
 COPY do-rebase .
