@@ -1,6 +1,7 @@
 FROM node:13.12.0-stretch
 
 WORKDIR "/renovate"
+COPY do-rebase .
 COPY do-renovate .
 ENV PATH="/renovate:${PATH}"
 
