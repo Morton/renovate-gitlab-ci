@@ -1,4 +1,4 @@
-FROM renovate/renovate:19
+FROM renovate/renovate:19.181
 
 WORKDIR "/usr/src/app/"
 COPY do-rebase .
