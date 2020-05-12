@@ -1,13 +1,13 @@
-FROM node:13.13.0-stretch
+FROM renovate/renovate:19
 
-WORKDIR "/renovate"
+WORKDIR "/usr/src/app/"
 COPY do-rebase .
 COPY do-renovate .
-ENV PATH="/renovate:${PATH}"
+ENV PATH="/usr/src/app/:${PATH}"
 
-COPY package.json .
-COPY package-lock.json .
+# COPY package.json .
+# COPY package-lock.json .
 
-RUN npm install
+# RUN npm install
 
 ENTRYPOINT bash

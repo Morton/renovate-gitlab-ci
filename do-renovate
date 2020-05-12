@@ -1,4 +1,5 @@
 #/bin/sh
 
-cd /renovate
-npm start $@
+#cd /renovate
+#npm start 
+node /usr/src/app/dist/renovate.js $@
