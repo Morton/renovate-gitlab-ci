@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "re2": "^1.10.5",
-    "renovate": "^19.181.0"
+    "renovate": "^24.0.0"
   },
   "release": {
     "plugins": [
